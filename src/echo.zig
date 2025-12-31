@@ -11,7 +11,7 @@ fn printString(writer: anytype, str: []const u8, interpret_escapes: bool) !void 
                 '\\' => try writer.writeByte('\\'),
                 '0' => try writer.writeByte(0),
                 else => {
-                    try writer.writeByte('\\'); // Print the backslash for unknown escapes
+                    try writer.writeByte('\\'); 
                     try writer.writeByte(str[i]);
                 },
             }
